@@ -19,3 +19,14 @@ Editing the .cs, .html, .scss files should reflect their changes in game in real
 
 # Guides
 * https://wiki.facepunch.com/sbox/Making_Gamemode
+* Barebones gamemode - https://github.com/Facepunch/sbox-minimal
+* Example DM gamemode - https://github.com/Facepunch/dm98
+* Sandbox gamemode - https://github.com/Facepunch/sandbox
+* The Hidden gamemode - https://github.com/Facepunch/sbox-hidden
+* Pool gamemode - https://github.com/Facepunch/sbox-pool
+* RTS gamemode - https://github.com/Facepunch/sbox-rts
+* TTT gamemode - https://github.com/TTTReborn/tttreborn
+* Mini-golf gamemode - https://github.com/handsomematt/sbox-minigolf
+* CTF gamemode - https://github.com/themasterminds/sbox-fortwars
+* Utility stuff for gamemodes - https://github.com/Ceveos/sbox-minimal-extended
+    * Permission system, SQL data storage, logger
