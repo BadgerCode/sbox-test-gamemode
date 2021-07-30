@@ -25,6 +25,8 @@ namespace MinimalExample
 			//
 			Camera = new ThirdPersonCamera();
 
+			//Inventory.Add(new Pistol(), true);
+
 			EnableAllCollisions = true;
 			EnableDrawing = true;
 			EnableHideInFirstPerson = true;
