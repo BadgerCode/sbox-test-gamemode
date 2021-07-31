@@ -5,16 +5,17 @@ namespace TestGamemode.ui
 {
 	// Look for a html template with the same name (in the same folder?)- TestElement.html
 	[UseTemplate]
-	public class TestElement : Panel
+	public class ExampleHTMLHUDElement : Panel
 	{
 		public string MyProperty { get; set; }
 		public Label Element { get; set; }
 		public string Name { get; set; }
 		public string Health { get; set; }
 
-		public TestElement()
+		public ExampleHTMLHUDElement()
 		{
-			MyProperty = "Some property"; // This will only run once- on gamemode load. Use restart in console to reload
+			StyleSheet.Load("/ui/ExampleHTMLHUDElement.scss");
+			MyProperty = "This property is set via CS code!"; // This will only run once- on gamemode load. Use restart in console to reload
 		}
 
 		public override void Tick()
@@ -24,7 +25,7 @@ namespace TestGamemode.ui
 			Health = (Local.Pawn?.Health.CeilToInt() ?? 100).ToString();
 
 			// Access an element directly
-			Element.Text = "Nice";
+			Element.Text = "This element's text has been directly altered via CS code!";
 			base.Tick();
 		}
 	}

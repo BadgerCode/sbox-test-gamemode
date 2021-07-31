@@ -5,14 +5,12 @@ using TestGamemode.ui;
 namespace TestGamemode
 {
 	[Library]
-	public partial class SandboxHud : HudEntity<RootPanel>
+	public partial class Hud : HudEntity<RootPanel>
 	{
-		public SandboxHud()
+		public Hud()
 		{
-			if ( !IsClient )
+			if (!IsClient)
 				return;
-
-			RootPanel.StyleSheet.Load( "/ui/SandboxHud.scss" );
 
 			RootPanel.AddChild<NameTags>();
 			RootPanel.AddChild<CrosshairCanvas>();
@@ -20,8 +18,8 @@ namespace TestGamemode
 			RootPanel.AddChild<VoiceList>();
 			RootPanel.AddChild<KillFeed>();
 			RootPanel.AddChild<Scoreboard<ScoreboardEntry>>();
-			RootPanel.AddChild<Health>();
-			RootPanel.AddChild<TestElement>();
+			RootPanel.AddChild<ExampleCSHUDElement>();
+			RootPanel.AddChild<ExampleHTMLHUDElement>();
 		}
 	}
 }

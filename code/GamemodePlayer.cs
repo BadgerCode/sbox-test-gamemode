@@ -1,10 +1,8 @@
 ﻿using Sandbox;
-using System;
-using System.Linq;
 
-namespace MinimalExample
+namespace TestGamemode
 {
-	partial class MinimalPlayer : Player
+	partial class GamemodePlayer : Player
 	{
 		public override void Respawn()
 		{
@@ -54,7 +52,7 @@ namespace MinimalExample
 			if ( IsServer && Input.Pressed( InputButton.Attack1 ) )
 			{
 				var ragdoll = new ModelEntity();
-				ragdoll.SetModel( "models/citizen/citizen.vmdl" );  
+				ragdoll.SetModel( "models/citizen/citizen.vmdl" );
 				ragdoll.Position = EyePos + EyeRot.Forward * 40;
 				ragdoll.Rotation = Rotation.LookAt( Vector3.Random.Normal );
 				ragdoll.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
