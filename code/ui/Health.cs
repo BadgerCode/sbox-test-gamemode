@@ -2,40 +2,23 @@
 using Sandbox.UI;
 using Sandbox.UI.Construct;
 
-//[UseTemplate]
-//public class Health : Panel
-//{
-//	public string MyVariable { get; set; }
-//	public Label Element { get; set; }
-
-//	public Health()
-//	{
-//		MyVariable = "Hello world";
-//	}
-
-//	public override void Tick()
-//	{
-//		var player = Local.Pawn;
-//		if ( player == null ) return;
-
-//		Element.Text = $"{player.Health.CeilToInt()}";
-//	}
-//}
-
-public class Health : Panel
+namespace TestGamemode.ui
 {
-	public Label Label;
-
-	public Health()
+	public class Health : Panel
 	{
-		Label = Add.Label( "100", "value" );
-	}
+		public Label Label;
 
-	public override void Tick()
-	{
-		var player = Local.Pawn;
-		if ( player == null ) return;
+		public Health()
+		{
+			Label = Add.Label( "100", "value" );
+		}
 
-		Label.Text = $"{player.Health.CeilToInt()}";
+		public override void Tick()
+		{
+			var player = Local.Pawn;
+			if ( player == null ) return;
+
+			Label.Text = $"{player.Health.CeilToInt()}";
+		}
 	}
 }
