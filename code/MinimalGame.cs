@@ -1,9 +1,4 @@
-﻿
-using Sandbox;
-using Sandbox.UI.Construct;
-using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using Sandbox;
 
 //
 // You don't need to put things in a namespace, but it doesn't hurt.
@@ -34,7 +29,7 @@ namespace MinimalExample
 				// and when it is created clientside it creates the actual
 				// UI panels. You don't have to create your HUD via an entity,
 				// this just feels like a nice neat way to do it.
-				new MinimalHudEntity();
+				_ = new SandboxHud();
 			}
 
 			if ( IsClient )
