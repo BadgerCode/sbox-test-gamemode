@@ -18,8 +18,8 @@ namespace TestGamemode
 			RootPanel.AddChild<VoiceList>();
 			RootPanel.AddChild<KillFeed>();
 			RootPanel.AddChild<Scoreboard<ScoreboardEntry>>();
-			RootPanel.AddChild<ExampleCSHUDElement>();
-			RootPanel.AddChild<ExampleHTMLHUDElement>();
+			RootPanel.AddChild<ExampleCSHUDElement>(); // A HUD element using C# code
+			RootPanel.AddChild<ExampleHTMLHUDElement>(); // A HUD element using HTML & C# code
 		}
 	}
 }

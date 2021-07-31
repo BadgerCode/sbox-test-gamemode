@@ -7,6 +7,7 @@ namespace TestGamemode.ui
 	[UseTemplate]
 	public class ExampleHTMLHUDElement : Panel
 	{
+		// If you add a property, you will need to reload the level- type restart in console
 		public string MyProperty { get; set; }
 		public Label Element { get; set; }
 		public string Name { get; set; }
@@ -14,7 +15,7 @@ namespace TestGamemode.ui
 
 		public ExampleHTMLHUDElement()
 		{
-			StyleSheet.Load("/ui/ExampleHTMLHUDElement.scss");
+			StyleSheet.Load($"/ui/{nameof(ExampleHTMLHUDElement)}.scss");
 			MyProperty = "This property is set via CS code!"; // This will only run once- on gamemode load. Use restart in console to reload
 		}
 

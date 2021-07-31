@@ -6,7 +6,8 @@ namespace TestGamemode.ui
 {
 	public class ExampleCSHUDElement : Panel
 	{
-		public Label Label;
+		// If you add a property, you will need to reload the level- type restart in console
+		public Label Label { get; set; }
 
 		public ExampleCSHUDElement()
 		{
